@@ -1,4 +1,6 @@
 import { Component } from "react";
+import PropTypes from "prop-types";
+import { FormLabel, FormInput, FormStyle, BtnSubmit } from "./Form.styles";
 
 class Form extends Component {
   state = {
@@ -27,10 +29,10 @@ class Form extends Component {
 
   render() {
     return (
-      <form onSubmit={this.FormSubmit}>
-        <label>
-          name
-          <input
+      <FormStyle onSubmit={this.FormSubmit}>
+        <FormLabel>
+          Name
+          <FormInput
             type="text"
             value={this.state.name}
             onChange={this.InputChange}
@@ -39,11 +41,11 @@ class Form extends Component {
             title="Имя может состоять только из букв, апострофа, тире и пробелов. Например Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan и т. п."
             required
           />
-        </label>
+        </FormLabel>
 
-        <label>
+        <FormLabel>
           Fhone number
-          <input
+          <FormInput
             type="tel"
             value={this.state.number}
             onChange={this.InputChange}
@@ -52,12 +54,16 @@ class Form extends Component {
             title="Номер телефона должен состоять цифр и может содержать пробелы, тире, круглые скобки и может начинаться с +"
             required
           />
-        </label>
+        </FormLabel>
 
-        <button type="submit">Add contact</button>
-      </form>
+        <BtnSubmit type="submit">ADD CONTACT</BtnSubmit>
+      </FormStyle>
     );
   }
 }
+
+Form.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
 
 export default Form;

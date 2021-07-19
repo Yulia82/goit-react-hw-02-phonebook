@@ -54,7 +54,7 @@ class App extends Component {
   };
 
   onDeleteContact = (evt) => {
-    console.log("Id", evt.target.name);
+    // console.log("Id", evt.target.name);
 
     this.setState((prevState) => ({
       contacts: prevState.contacts.filter(
