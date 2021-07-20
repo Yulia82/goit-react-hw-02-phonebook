@@ -18,11 +18,14 @@ class App extends Component {
     const { contacts } = this.state;
     const { name, number } = dataSubmit;
 
-    contacts.forEach((contact) => {
-      if (name === contact.name) {
-        alert(`${name} is already in contacts`);
-      }
-    });
+    if (
+      contacts.find(
+        (contact) => name.toLowerCase() === contact.name.toLowerCase()
+      )
+    ) {
+      alert(`${name} is already in contacts`);
+      return;
+    }
 
     const newContact = {
       id: uuidv4(),
@@ -49,7 +52,7 @@ class App extends Component {
     const contactsFilter = contacts.filter((contact) =>
       contact.name.toLowerCase().includes(filter.toLowerCase())
     );
-    // console.log('filterArr', contactsFilter);
+
     return contactsFilter;
   };
 
