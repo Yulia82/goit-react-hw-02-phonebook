@@ -12,13 +12,14 @@ export const FormLabel = styled.label`
 
 export const FormInput = styled.input`
   border-radius: 6px;
-  height: 20px;
+  height: 26px;
+  border-color: var(--second-color);
 
   &:hover,
   &:focus {
     cursor: pointer;
     outline: none;
-    border-color: #ba8ae9;
+    border-color: var(--main-color);
   }
 `;
 
@@ -34,18 +35,20 @@ export const FormStyle = styled.form`
 `;
 
 export const BtnSubmit = styled.button`
+  display: flex;
+  align-items: center;
   min-width: 100px;
   padding: 6px 15px;
   margin-top: 10px;
   margin-right: auto;
 
-  border-color: #ba8ae9;
+  border-color: var(--second-color);
   border-radius: 6px;
 
   &:hover,
   &:focus {
-    background-color: #ba8ae9;
-    color: #ffffff;
+    background-color: var(--second-color);
+    color: var(--invers-color);
     cursor: pointer;
   }
 `;

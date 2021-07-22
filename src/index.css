@@ -1,3 +1,10 @@
+:root {
+  --main-color: #8919fa;
+  --second-color: #ba8ae9;
+  --invers-color: #ffffff;
+  --bg-color: rgba(221, 198, 244, 0.3);
+}
+
 body {
   margin: 0;
   padding: 40px 20px;

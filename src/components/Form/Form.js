@@ -1,6 +1,7 @@
 import { Component } from "react";
 import PropTypes from "prop-types";
 import { FormLabel, FormInput, FormStyle, BtnSubmit } from "./Form.styles";
+import { MdPersonAdd } from "react-icons/md";
 
 class Form extends Component {
   state = {
@@ -56,7 +57,10 @@ class Form extends Component {
           />
         </FormLabel>
 
-        <BtnSubmit type="submit">ADD CONTACT</BtnSubmit>
+        <BtnSubmit type="submit">
+          ADD CONTACT{" "}
+          <MdPersonAdd size={26} color="#8919FA" style={{ marginLeft: 20 }} />
+        </BtnSubmit>
       </FormStyle>
     );
   }

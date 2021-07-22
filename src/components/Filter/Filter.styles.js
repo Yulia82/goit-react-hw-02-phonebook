@@ -13,12 +13,13 @@ export const FilterLabel = styled.label`
 
 export const FilterInput = styled.input`
   border-radius: 6px;
-  height: 20px;
+  height: 24px;
+  border-color: var(--second-color);
 
   &:hover,
   &:focus {
     cursor: pointer;
     outline: none;
-    border-color: #ba8ae9;
+    border-color: var(--main-color);
   }
 `;
